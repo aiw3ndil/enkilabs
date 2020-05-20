@@ -1,0 +1,47 @@
+# Site settings
+title: enkilabs
+email: info@enkilabs.site
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+twitter_username:
+github_username:
+
+# Build settings
+markdown: kramdown
+
+# Team names, titles and social links
+people:
+- name: Albert Oliva
+  pic: 1
+  position: Lead Backend Developer
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/albertoliva/
+    - title: facebook
+      url: https://www.facebook.com/narovi.terminus
+    - title: flickr
+      url: https://www.flickr.com/photos/tru3n0
+
+- name: Mario Carlos Roca
+  pic: 2
+  position: Lead Developer UX/UI
+  social:
+    - title: twitter
+      url: https://twitter.com/marioccarloss
+    - title: facebook
+      url: https://www.facebook.com/marioccarloss
+    - title: linkedin
+      url: https://www.linkedin.com/in/marioccarloss/
+
+- name: Jairo Rivera
+  pic: 3
+  position: Data Scientist & Big Data
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/jairoriveracueva
+    - title: facebook
+      url: https://www.facebook.com/jairoabrahan.riveracueva
+    - title: github
+      url: #
