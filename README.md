@@ -1,3 +1,5 @@
-gem install jekyll
-cd REPO_DIR
-jekyll serve
+$ gem install jekyll
+
+$ cd REPO_DIR
+
+$ jekyll serve
