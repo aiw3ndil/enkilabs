@@ -45,3 +45,14 @@ people:
       url: https://www.facebook.com/jairoabrahan.riveracueva
     - title: github
       url: #
+
+- name: Amanda M. Grigsby
+  pic: 4
+  position: Data Scientist & Big Data
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/amanda-paes-de-barros-a220b71b6/
+    - title: facebook
+      url: https://www.facebook.com/mandichloemalaise
+    - title: twitter
+      url: https://twitter.com/ada_willow
