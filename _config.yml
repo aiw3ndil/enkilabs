@@ -24,35 +24,35 @@ people:
     - title: twitter
       url: https://twitter.com/aiw3ndil
 
-#- name: Mario Carlos Roca
-#  pic: 2
-#  position: Lead Developer UX/UI
-#  social:
-#    - title: twitter
-#      url: https://twitter.com/marioccarloss
-#    - title: facebook
-#      url: https://www.facebook.com/marioccarloss
-#    - title: linkedin
-#      url: https://www.linkedin.com/in/marioccarloss/
-#
-#- name: Jairo Rivera
-#  pic: 3
-#  position: Data Scientist & Big Data
-#  social:
-#    - title: linkedin
-#      url: https://www.linkedin.com/in/jairoriveracueva
-#    - title: facebook
-#      url: https://www.facebook.com/jairoabrahan.riveracueva
-#    - title: github
-#      url: #
+- name: Mario Carlos Roca
+  pic: 2
+  position: Lead Developer UX/UI
+  social:
+    - title: twitter
+      url: https://twitter.com/marioccarloss
+    - title: facebook
+      url: https://www.facebook.com/marioccarloss
+    - title: linkedin
+      url: https://www.linkedin.com/in/marioccarloss/
 
-- name: Amanda M. Grigsby
-  pic: 4
-  position: Frontend Developer & Designer
+- name: Jairo Rivera
+  pic: 3
+  position: Data Scientist & Big Data
   social:
     - title: linkedin
-      url: https://www.linkedin.com/in/amanda-paes-de-barros-a220b71b6/
+      url: https://www.linkedin.com/in/jairoriveracueva
     - title: facebook
-      url: https://www.facebook.com/mandichloemalaise
-    - title: twitter
-      url: https://twitter.com/ada_willow
+      url: https://www.facebook.com/jairoabrahan.riveracueva
+    - title: github
+      url: #
+
+#- name: Amanda M. Grigsby
+#  pic: 4
+#  position: Frontend Developer & Designer
+#  social:
+#    - title: linkedin
+#      url: https://www.linkedin.com/in/amanda-paes-de-barros-a220b71b6/
+#    - title: facebook
+#      url: https://www.facebook.com/mandichloemalaise
+#    - title: twitter
+#      url: https://twitter.com/ada_willow
