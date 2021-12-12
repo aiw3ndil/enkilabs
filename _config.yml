@@ -1,6 +1,6 @@
 # Site settings
 title: Enkimail
-email: info@enkilabs.site
+email: info@enkimail.com
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
@@ -35,24 +35,24 @@ people:
 #    - title: twitter
 #      url: https://twitter.com/ada_willow
 
-- name: Jairo Rivera
-  pic: 3
-  position: Data Scientist & Big Data
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/jairoriveracueva
-    - title: facebook
-      url: https://www.facebook.com/jairoabrahan.riveracueva
-    - title: github
-      url: #
+#- name: Jairo Rivera
+#  pic: 3
+#  position: Data Scientist & Big Data
+#  social:
+#    - title: linkedin
+#      url: https://www.linkedin.com/in/jairoriveracueva
+#    - title: facebook
+#      url: https://www.facebook.com/jairoabrahan.riveracueva
+#    - title: github
+#      url: #
 
-- name: Mario Carlos Roca
-  pic: 4
-  position: Lead Developer UX/UI
-  social:
-    - title: twitter
-      url: https://twitter.com/marioccarloss
-    - title: facebook
-      url: https://www.facebook.com/marioccarloss
-    - title: linkedin
-      url: https://www.linkedin.com/in/marioccarloss/
+#- name: Mario Carlos Roca
+#  pic: 4
+#  position: Lead Developer UX/UI
+#  social:
+#    - title: twitter
+#      url: https://twitter.com/marioccarloss
+#    - title: facebook
+#      url: https://www.facebook.com/marioccarloss
+#    - title: linkedin
+#      url: https://www.linkedin.com/in/marioccarloss/
