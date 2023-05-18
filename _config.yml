@@ -15,7 +15,7 @@ markdown: kramdown
 people:
 - name: Albert Oliva
   pic: 1
-  position: Founder · Lead Backend Developer
+  position: Founder · Lead Developer
   social:
     - title: linkedin
       url: https://www.linkedin.com/in/albertoliva/
