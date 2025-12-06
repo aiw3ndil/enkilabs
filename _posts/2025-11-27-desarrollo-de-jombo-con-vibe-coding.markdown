@@ -45,7 +45,3 @@ Durante el desarrollo de Jombo, he aplicado los principios del vibe coding de la
 ## 🔮 Próximos Pasos
 
 El proyecto continúa evolucionando, y seguiré aplicando vibe coding mientras añado nuevas funcionalidades y optimizo la experiencia del usuario. Mantente atento para más actualizaciones sobre el progreso de Jombo.
-
----
-
-¿Te interesa el vibe coding o quieres saber más sobre Jombo? ¡Visita los repositorios en GitHub y no dudes en contribuir o compartir tus comentarios!

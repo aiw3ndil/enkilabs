@@ -211,7 +211,3 @@ Con un servidor gratuito de Oracle Cloud y Coolify, puedes tener múltiples apli
 - [Documentación oficial de Coolify](https://coolify.io/docs)
 - [Repositorio GitHub de Coolify](https://github.com/coollabsio/coolify)
 - [Comunidad de Coolify en Discord](https://coollabs.io/discord)
-
----
-
-¿Has probado Coolify para tus proyectos Rails? ¿Tienes alguna experiencia que compartir? ¡Déjame saber en los comentarios!
