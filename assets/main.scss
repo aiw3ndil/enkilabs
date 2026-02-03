@@ -198,6 +198,31 @@ a:hover {
   color: $text-secondary;
 }
 
+.post-excerpt {
+  color: $text-primary;
+  line-height: 1.6;
+  margin: 12px 0;
+  font-size: 0.95rem;
+}
+
+.read-more-btn {
+  display: inline-block;
+  color: $accent-cyan;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.read-more-btn:hover {
+  color: $accent-purple;
+  background: rgba(159, 47, 255, 0.1);
+  text-shadow: 0 0 10px rgba(159, 47, 255, 0.3);
+  padding-right: 20px;
+}
+
 /* Code blocks with hacker theme */
 pre, code {
   background: #000000;

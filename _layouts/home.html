@@ -21,9 +21,17 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-		<div>{{ post.content | markdownify }}</div>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+        
+        {%- if post.excerpt -%}
+          <div class="post-excerpt">
+            {{ post.excerpt | markdownify | strip_html | truncatewords: 50 }}
+          </div>
+          <a href="{{ post.url | relative_url }}" class="read-more-btn">Leer más →</a>
+        {%- else -%}
+          <div class="post-excerpt">
+            {{ post.content | markdownify | strip_html | truncatewords: 50 }}
+          </div>
+          <a href="{{ post.url | relative_url }}" class="read-more-btn">Leer más →</a>
         {%- endif -%}
       </li>
       {%- endfor -%}
