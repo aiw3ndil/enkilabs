@@ -3,6 +3,7 @@ layout: post
 title: "Por qué Ruby on Rails sigue siendo ideal para proyectos pequeños en 2026"
 date: 2026-01-01 2:21:00 +0200
 categories: desarrollo web
+tags: [ruby on rails, rails, productividad, mvp, startup, web development]
 ---
 
 En un mundo tecnológico que se mueve a la velocidad de la luz, con nuevos frameworks de JavaScript y lenguajes emergentes compitiendo por la atención, es fácil preguntarse si una tecnología con más de 20 años como Ruby on Rails sigue siendo relevante. La respuesta corta es un rotundo **sí**, especialmente si estás trabajando en un proyecto pequeño, un MVP (Producto Mínimo Viable) o una startup que necesita moverse rápido.

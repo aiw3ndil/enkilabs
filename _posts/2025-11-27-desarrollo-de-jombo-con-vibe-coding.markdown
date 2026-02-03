@@ -3,6 +3,7 @@ layout: post
 title:  "Desarrollando Jombo: Aplicando Vibe Coding al Desarrollo de Software"
 date:   2025-11-27 6:25:00 +0200
 categories: desarrollo
+tags: [vibe coding, metodología, desarrollo, creativity, software]
 ---
 Actualmente estoy trabajando en **Jombo**, un proyecto emocionante que estoy desarrollando aplicando los principios del **vibe coding**. Esta metodología de desarrollo se centra en mantener el flujo, la creatividad y la intuición como motores principales del proceso de construcción de software.
 

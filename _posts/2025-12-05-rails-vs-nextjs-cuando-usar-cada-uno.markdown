@@ -3,6 +3,7 @@ layout: post
 title: "Rails vs Next.js: Cuándo usar cada uno en un proyecto real"
 date: 2025-12-05 20:31:00 -0000
 categories: desarrollo web
+tags: [ruby on rails, next.js, comparación, backend, frontend, react]
 ---
 
 Elegir entre Rails y Next.js es una de las decisiones más importantes al iniciar un proyecto web. Ambos frameworks son excelentes, pero brillan en contextos diferentes. Aquí te cuento cuándo usar cada uno basándome en experiencia real.

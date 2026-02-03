@@ -3,6 +3,7 @@ layout: post
 title:  "Cómo Desplegar Rails Gratis Usando Coolify"
 date:   2025-12-02 18:18:00 +0200
 categories: desarrollo rails deployment
+tags: [ruby on rails, coolify, deployment, devops, gratis, open-source]
 ---
 Desplegar aplicaciones Rails puede ser costoso si utilizas plataformas tradicionales. En este artículo, te mostraré cómo puedes **desplegar tu aplicación Rails completamente gratis** utilizando **Coolify**, una alternativa open-source a Heroku y Netlify.
 

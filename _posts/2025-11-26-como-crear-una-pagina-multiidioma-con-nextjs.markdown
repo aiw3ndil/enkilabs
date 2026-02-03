@@ -3,6 +3,7 @@ layout: post
 title:  "Como crear una pagina multiidioma con react"
 date:   2025-11-26 18:53:00 +0200
 categories: integracion
+tags: [next.js, react, internacionalización, i18n, web]
 ---
 🌍 Cómo Crear una Página Web Multiidioma con Next.js: Guía Completa
 
