@@ -1,0 +1,31 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid-truek" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#9B5523" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow-truek">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" rx="8" ry="8" fill="#1E1E1E" />
+  <rect width="400" height="300" fill="url(#grid-truek)" />
+
+  <text
+    x="50%"
+    y="50%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="monospace, 'Courier New', Courier"
+    font-size="60"
+    font-weight="bold"
+    fill="#CD853F"
+    letter-spacing="2"
+    filter="url(#glow-truek)">
+    Truek
+  </text>
+</svg>

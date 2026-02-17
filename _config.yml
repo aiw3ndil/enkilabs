@@ -28,6 +28,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:  Enkil4bs
 google_analytics: G-0Q55DL1GGF
+header_pages:
+  - about.markdown
+  - proyectos.markdown
 lang: es_ES
 
 # Build settings
