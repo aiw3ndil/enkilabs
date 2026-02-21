@@ -33,7 +33,7 @@ $grid-color: rgba(11, 177, 211, 0.1);
 html { font-size: 18px; }
 body {
   background: $bg-primary;
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 50%, rgba(15, 177, 211, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(159, 47, 255, 0.05) 0%, transparent 50%),
     repeating-linear-gradient(
@@ -302,13 +302,13 @@ table th {
     padding-left: 12px;
     padding-right: 12px;
   }
-  
-  .page-content { 
+
+  .page-content {
     padding: 20px;
     margin-top: 0;
     border-radius: 16px;
   }
-  
+
   html { font-size: 16px; }
 }
 
