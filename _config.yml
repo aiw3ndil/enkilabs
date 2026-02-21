@@ -65,6 +65,3 @@ disqus:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-disqus:
-  shortname: enkilabs-site
