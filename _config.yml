@@ -28,6 +28,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Enkilabs1
 github_username:  Enkil4bs
 google_analytics: G-0Q55DL1GGF
+disqus:
+  shortname: enkilabs-site
 header_pages:
   - about.markdown
 lang: es_ES
