@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Blog de desarrollo de software y tecnología.
   Compartiendo conocimientos, tutoriales y experiencias en el mundo de la programación.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://enkilabs.site/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Enkilabs1
 github_username:  Enkil4bs
 google_analytics: G-0Q55DL1GGF
