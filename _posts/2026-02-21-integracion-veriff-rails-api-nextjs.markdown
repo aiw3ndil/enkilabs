@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Verificación de Identidad con Veriff: Guía de Integración con Rails API y Next.js"
-date:   2026-02-21 11:00:00 +0000
+date:   2026-02-21 11:00:00 +0200
 categories: rails nextjs veriff kyc security
 ---
 

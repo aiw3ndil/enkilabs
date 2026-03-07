@@ -1,16 +1,21 @@
 ---
 layout: page
-title: Sobre este blog
+title: Sobre mí
 permalink: /about/
 ---
 
-## Sobre este blog
+## Hola, soy Albert Oliva
 
-Bienvenido/a. Este es un blog dedicado al desarrollo web: comparto artículos, tutoriales y experiencias prácticas sobre tecnologías web, buenas prácticas, herramientas y flujo de trabajo.
+Bienvenido/a a **Enkilabs**. Soy el creador y único mantenedor de este espacio dedicado a explorar las fronteras del desarrollo web moderno.
 
-- **Temas frecuentes:** HTML, CSS, JavaScript, frameworks front-end, desarrollo backend, despliegue, accesibilidad y rendimiento.
-- **Para quién:** desarrolladores principiantes y avanzados interesados en mejorar su trabajo diario y aprender nuevas técnicas.
+Mi enfoque principal es la construcción de aplicaciones robustas y escalables, utilizando principalmente el ecosistema de **Ruby on Rails** para el backend y **Next.js** para el frontend. En este blog, comparto guías técnicas, reflexiones sobre arquitectura de software y experiencias reales resolviendo problemas complejos.
 
-Mi objetivo es publicar contenido claro, con ejemplos reales y guías paso a paso que puedas aplicar en tus proyectos.
+### ¿Qué encontrarás aquí?
+- **Tutoriales prácticos:** Desde integraciones de APIs (Stripe, Google Auth, Veriff) hasta configuraciones avanzadas de despliegue.
+- **Flujos de trabajo:** Mi experiencia personal con herramientas y metodologías que optimizan el desarrollo diario.
+- **Innovación:** Exploración de nuevas tecnologías y cómo aplicarlas con sentido práctico.
 
-¡Gracias por visitar el blog!
+### Conóceme más
+Si quieres saber más sobre mis proyectos o contactar conmigo, puedes visitar mi sitio personal en <a href="https://albertoliva.xyz" target="_blank" rel="noopener noreferrer">albertoliva.xyz</a>.
+
+¡Gracias por acompañarme en este viaje de aprendizaje y construcción!
