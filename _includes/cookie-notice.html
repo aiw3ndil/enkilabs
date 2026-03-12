@@ -1,0 +1,37 @@
+<div id="cookie-notice" class="cookie-notice" style="display: none;">
+  <div class="cookie-notice-content">
+    <div class="cookie-notice-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 15.5v.01"></path><path d="M12 12v.01"></path><path d="M11 17v.01"></path><path d="M7 14v.01"></path></svg>
+    </div>
+    <div class="cookie-notice-text">
+      <p>Utilizamos cookies para mejorar tu experiencia en la red. Al continuar navegando, aceptas nuestra política de cookies.</p>
+    </div>
+    <div class="cookie-notice-actions">
+      <button id="accept-cookies" class="btn btn-cookies">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const cookieNotice = document.getElementById('cookie-notice');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const COOKIE_KEY = 'enkilabs_cookies_accepted';
+
+    // Verificar si ya se aceptaron las cookies
+    if (!localStorage.getItem(COOKIE_KEY)) {
+      cookieNotice.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', function() {
+      // Guardar en localStorage
+      localStorage.setItem(COOKIE_KEY, 'true');
+      
+      // Animación de salida y ocultar
+      cookieNotice.classList.add('fade-out');
+      setTimeout(() => {
+        cookieNotice.style.display = 'none';
+      }, 300);
+    });
+  })();
+</script>
