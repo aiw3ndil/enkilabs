@@ -1,32 +1,32 @@
 ---
 layout: post
-title: "Cómo Montar un Sistema de Notificaciones en Ruby on Rails"
+title: "How to Set Up a Notification System in Ruby on Rails"
 date: 2026-02-03 12:34:00 +0200
-categories: desarrollo web ruby rails
-tags: [ruby on rails, notificaciones, sidekiq, actioncable, backend, real-time]
+categories: web development ruby rails
+tags: [ruby on rails, notifications, sidekiq, actioncable, backend, real-time]
 ---
 
-Las notificaciones son un componente crítico en cualquier aplicación moderna. Ya sea alertas de correo, mensajes en tiempo real o notificaciones push, un sistema bien diseñado mantiene a tus usuarios enganchados e informados. En esta guía, te mostraré cómo construir un sistema de notificaciones robusto y escalable en **Ruby on Rails**.
+Notifications are a critical component in any modern application. Whether it's email alerts, real-time messages, or push notifications, a well-designed system keeps your users engaged and informed. In this guide, I will show you how to build a robust and scalable notification system in **Ruby on Rails**.
 
-## ¿Por qué necesitas un sistema de notificaciones?
+## Why do you need a notification system?
 
-Antes de sumergirnos en el código, es importante entender el valor:
+Before diving into the code, it's important to understand the value:
 
-- **Engagement**: Las notificaciones mantienen a los usuarios informados y volviendo a la aplicación
-- **Experiencia mejorada**: Los usuarios saben exactamente qué está pasando
-- **Escalabilidad**: Un buen sistema puede crecer con tu aplicación
-- **Flexibilidad**: Diferentes canales (email, SMS, in-app, push)
+- **Engagement**: Notifications keep users informed and coming back to the application.
+- **Improved Experience**: Users know exactly what is happening.
+- **Scalability**: A good system can grow with your application.
+- **Flexibility**: Different channels (email, SMS, in-app, push).
 
-## Arquitectura básica
+## Basic Architecture
 
-Un sistema de notificaciones típico tiene estos componentes:
+A typical notification system has these components:
 
-1. **Modelo de Notificación**: Almacena la información de la notificación
-2. **Generadores**: Lógica que crea notificaciones basada en eventos
-3. **Canales de Entrega**: Email, SMS, push, in-app
-4. **Cola de Trabajo**: Para procesamiento asincrónico (Sidekiq, Resque)
+1. **Notification Model**: Stores the notification information.
+2. **Generators**: Logic that creates notifications based on events.
+3. **Delivery Channels**: Email, SMS, push, in-app.
+4. **Job Queue**: For asynchronous processing (Sidekiq, Resque).
 
-## Paso 1: Crear el modelo de Notificación
+## Step 1: Create the Notification model
 
 ```ruby
 # config/routes.rb
@@ -46,7 +46,7 @@ class Notification < ApplicationRecord
 end
 ```
 
-Necesitamos una migración:
+We need a migration:
 
 ```ruby
 # db/migrate/20260203000000_create_notifications.rb
@@ -70,7 +70,7 @@ class CreateNotifications < ActiveRecord::Migration[7.0]
 end
 ```
 
-## Paso 2: Crear un servicio generador de notificaciones
+## Step 2: Create a Notification Generator Service
 
 ```ruby
 # app/services/notification_service.rb
@@ -83,7 +83,7 @@ class NotificationService
       notifiable: notifiable
     )
     
-    # Procesar en background
+    # Process in background
     NotificationJob.perform_later(notification.id, notification_type)
     
     notification
@@ -97,7 +97,7 @@ class NotificationService
 end
 ```
 
-## Paso 3: Crear el Job para procesamiento asincrónico
+## Step 3: Create the Job for Asynchronous Processing
 
 ```ruby
 # app/jobs/notification_job.rb
@@ -115,7 +115,7 @@ class NotificationJob < ApplicationJob
     when 'push'
       send_push_notification(notification)
     when 'in_app'
-      # Las notificaciones in-app ya están en la BD
+      # In-app notifications are already in the DB
       broadcast_notification(notification)
     end
     
@@ -128,12 +128,12 @@ class NotificationJob < ApplicationJob
   private
   
   def send_sms_notification(notification)
-    # Usando Twilio o similar
+    # Using Twilio or similar
     # SmsService.send(notification.user.phone, notification.message)
   end
   
   def send_push_notification(notification)
-    # Usando Firebase Cloud Messaging o APNs
+    # Using Firebase Cloud Messaging or APNs
     # PushService.send(notification.user, notification)
   end
   
@@ -150,7 +150,7 @@ class NotificationJob < ApplicationJob
 end
 ```
 
-## Paso 4: Mailer para notificaciones por email
+## Step 4: Mailer for Email Notifications
 
 ```ruby
 # app/mailers/notification_mailer.rb
@@ -172,12 +172,12 @@ end
 <h1><%= @notification.title %></h1>
 <p><%= @notification.message %></p>
 <p>
-  <%= link_to 'Ver en la aplicación', 
+  <%= link_to 'View in Application', 
       root_url(utm_source: 'email', utm_medium: 'notification') %>
 </p>
 ```
 
-## Paso 5: Controlador para gestionar notificaciones
+## Step 5: Controller to Manage Notifications
 
 ```ruby
 # app/controllers/notifications_controller.rb
@@ -217,35 +217,35 @@ class NotificationsController < ApplicationController
 end
 ```
 
-## Paso 6: Usar el sistema en tu aplicación
+## Step 6: Using the System in Your Application
 
-Ahora puedes crear notificaciones en cualquier lugar:
+Now you can create notifications anywhere:
 
 ```ruby
-# En un controlador, servicio o callback
+# In a controller, service, or callback
 class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     
     if @post.save
-      # Notificar al creador
+      # Notify the creator
       NotificationService.notify(
         current_user,
-        'Tu post fue publicado',
-        'Tu nuevo post está ahora visible para todos',
+        'Your post was published',
+        'Your new post is now visible to everyone',
         notifiable: @post
       )
       
-      # Notificar a seguidores
+      # Notify followers
       followers = current_user.followers
       NotificationService.notify_multiple(
         followers,
-        "#{current_user.name} compartió un nuevo post",
+        "#{current_user.name} shared a new post",
         @post.title,
         notification_type: :push
       )
       
-      redirect_to @post, notice: 'Post creado exitosamente'
+      redirect_to @post, notice: 'Post successfully created'
     else
       render :new
     end
@@ -253,7 +253,7 @@ class PostsController < ApplicationController
 end
 ```
 
-## Paso 7: ActionCable para notificaciones en tiempo real
+## Step 7: ActionCable for Real-time Notifications
 
 ```ruby
 # app/channels/notifications_channel.rb
@@ -273,7 +273,7 @@ Rails.application.routes.draw do
 end
 ```
 
-En el frontend (JavaScript):
+In the frontend (JavaScript):
 
 ```javascript
 // app/javascript/channels/notifications_channel.js
@@ -281,20 +281,20 @@ import consumer from "./consumer"
 
 consumer.subscriptions.create("NotificationsChannel", {
   connected() {
-    console.log("Conectado al canal de notificaciones")
+    console.log("Connected to notification channel")
   },
 
   received(data) {
-    // Actualizar UI con la nueva notificación
-    console.log("Nueva notificación:", data)
+    // Update UI with the new notification
+    console.log("New notification:", data)
     addNotificationToUI(data.notification)
   }
 })
 ```
 
-## Mejores prácticas
+## Best Practices
 
-### 1. **Preferencias de usuario**
+### 1. **User Preferences**
 ```ruby
 class User < ApplicationRecord
   store :notification_preferences, accessors: [
@@ -305,38 +305,38 @@ class User < ApplicationRecord
 end
 ```
 
-### 2. **Rate limiting**
+### 2. **Rate Limiting**
 ```ruby
 class NotificationService
   def self.notify(user, title, message, notification_type: :in_app)
-    # Evitar spam
+    # Avoid spam
     if user.notifications.where(created_at: 1.hour.ago..).count > 10
       return false
     end
     
-    # ...crear notificación
+    # ...create notification
   end
 end
 ```
 
-### 3. **Logging y monitoreo**
+### 3. **Logging and Monitoring**
 ```ruby
 class NotificationJob < ApplicationJob
   def perform(notification_id, notification_type)
-    Rails.logger.info("Enviando notificación #{notification_id}")
-    # ... código de envío
+    Rails.logger.info("Sending notification #{notification_id}")
+    # ... shipping code
   end
 end
 ```
 
-## Alternativas y librerías útiles
+## Useful Alternatives and Libraries
 
-- **Noticed**: Gem que simplifica todo este proceso
-- **Devise**: Para autenticación (ya mencionado)
-- **Sidekiq**: Para procesamiento en background
-- **Firebase**: Para notificaciones push
-- **Twilio**: Para SMS
+- **Noticed**: Gem that simplifies this whole process.
+- **Devise**: For authentication (already mentioned).
+- **Sidekiq**: For background processing.
+- **Firebase**: For push notifications.
+- **Twilio**: For SMS.
 
-## Conclusión
+## Conclusion
 
-Un sistema de notificaciones bien implementado es fundamental para retener usuarios y proporcionar una experiencia excepcional. Rails te proporciona todas las herramientas necesarias para construir un sistema robusto, escalable y mantenible.
+A well-implemented notification system is fundamental to retaining users and providing an exceptional experience. Rails provides all the necessary tools to build a robust, scalable, and maintainable system.sistema robusto, escalable y mantenible.

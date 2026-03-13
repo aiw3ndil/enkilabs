@@ -1,21 +1,21 @@
 ---
 layout: page
-title: Sobre mí
+title: About
 permalink: /about/
 ---
 
-## Hola, soy Albert Oliva
+## Hi, I'm Albert Oliva
 
-Bienvenido/a a **Enkilabs**. Soy el creador y único mantenedor de este espacio dedicado a explorar las fronteras del desarrollo web moderno.
+Welcome to **Enkilabs**. I am the creator and sole maintainer of this space dedicated to exploring the frontiers of modern web development.
 
-Mi enfoque principal es la construcción de aplicaciones robustas y escalables, utilizando principalmente el ecosistema de **Ruby on Rails** para el backend y **Next.js** para el frontend. En este blog, comparto guías técnicas, reflexiones sobre arquitectura de software y experiencias reales resolviendo problemas complejos.
+My main focus is building robust and scalable applications, primarily using the **Ruby on Rails** ecosystem for the backend and **Next.js** for the frontend. In this blog, I share technical guides, reflections on software architecture, and real experiences solving complex problems.
 
-### ¿Qué encontrarás aquí?
-- **Tutoriales prácticos:** Desde integraciones de APIs (Stripe, Google Auth, Veriff) hasta configuraciones avanzadas de despliegue.
-- **Flujos de trabajo:** Mi experiencia personal con herramientas y metodologías que optimizan el desarrollo diario.
-- **Innovación:** Exploración de nuevas tecnologías y cómo aplicarlas con sentido práctico.
+### What will you find here?
+- **Practical tutorials:** From API integrations (Stripe, Google Auth, Veriff) to advanced deployment configurations.
+- **Workflows:** My personal experience with tools and methodologies that optimize daily development.
+- **Innovation:** Exploring new technologies and how to apply them with practical sense.
 
-### Conóceme más
-Si quieres saber más sobre mis proyectos o contactar conmigo, puedes visitar mi sitio personal en <a href="https://albertoliva.xyz" target="_blank" rel="noopener noreferrer">albertoliva.xyz</a>.
+### Get to know me more
+If you want to know more about my projects or contact me, you can visit my personal site at <a href="https://albertoliva.xyz" target="_blank" rel="noopener noreferrer">albertoliva.xyz</a>.
 
-¡Gracias por acompañarme en este viaje de aprendizaje y construcción!
+Thank you for joining me on this journey of learning and building!

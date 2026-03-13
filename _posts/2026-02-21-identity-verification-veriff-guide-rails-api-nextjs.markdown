@@ -1,29 +1,29 @@
 ---
 layout: post
-title:  "Verificación de Identidad con Veriff: Guía de Integración con Rails API y Next.js"
+title:  "Identity Verification with Veriff: Integration Guide with Rails API and Next.js"
 date:   2026-02-21 11:00:00 +0200
 categories: rails nextjs veriff kyc security
 ---
 
-En el ecosistema fintech y de aplicaciones SaaS, la verificación de identidad (KYC) se ha vuelto un paso obligatorio. **Veriff** es una de las plataformas líderes para automatizar este proceso mediante IA.
+In the fintech and SaaS application ecosystem, identity verification (KYC) has become a mandatory step. **Veriff** is one of the leading platforms for automating this process using AI.
 
-En este artículo, te mostraré cómo orquestar un flujo de verificación completo utilizando **Ruby on Rails** como API y **Next.js** en el frontend.
+In this article, I will show you how to orchestrate a complete verification flow using **Ruby on Rails** as an API and **Next.js** on the frontend.
 
-### ¿Cómo funciona el flujo de Veriff?
+### How does the Veriff flow work?
 
-1.  **Backend (Rails):** Crea una "sesión" de verificación en Veriff y obtiene una URL única.
-2.  **Frontend (Next.js):** Recibe la URL y redirige al usuario (o abre un iframe) para que complete el proceso (foto de ID, selfie, etc.).
-3.  **Webhook (Rails):** Veriff notifica a tu servidor cuando la verificación ha sido aprobada o rechazada.
+1.  **Backend (Rails):** Creates a verification "session" in Veriff and obtains a unique URL.
+2.  **Frontend (Next.js):** Receives the URL and redirects the user (or opens an iframe) to complete the process (ID photo, selfie, etc.).
+3.  **Webhook (Rails):** Veriff notifies your server when the verification has been approved or rejected.
 
 ---
 
-## Parte 1: El Backend con Ruby on Rails
+## Part 1: The Backend with Ruby on Rails
 
-El backend es el guardián de tus claves secretas y el encargado de procesar los resultados de forma segura.
+The backend is the guardian of your secret keys and responsible for processing results securely.
 
-### Paso 1: Configurar Credenciales
+### Step 1: Configure Credentials
 
-Necesitarás tu `API Key` y tu `Private Key` de Veriff.
+You will need your Veriff `API Key` and `Private Key`.
 
 ```bash
 rails credentials:edit
@@ -36,9 +36,9 @@ veriff:
   private_key: your_private_key
 ```
 
-### Paso 2: Crear una Sesión de Verificación
+### Step 2: Create a Verification Session
 
-Crearemos un servicio para interactuar con la API de Veriff. Usaremos la gema `httparty` o simplemente `Net::HTTP`.
+We'll create a service to interact with the Veriff API. We'll use the `httparty` gem or simply `Net::HTTP`.
 
 ```ruby
 # app/services/veriff_service.rb
@@ -50,7 +50,7 @@ class VeriffService
   def self.create_session(user_id)
     payload = {
       verification: {
-        callback: "https://tu-api.com/api/v1/veriff/webhooks",
+        callback: "https://your-api.com/api/v1/veriff/webhooks",
         vendorData: user_id.to_s
       }
     }.to_json
@@ -76,9 +76,9 @@ class VeriffService
 end
 ```
 
-### Paso 3: Controlador y Webhook
+### Step 3: Controller and Webhook
 
-Es vital validar la firma del webhook para asegurarte de que la notificación realmente viene de Veriff.
+It is vital to validate the webhook signature to ensure that the notification actually comes from Veriff.
 
 ```ruby
 # app/controllers/api/v1/veriff_controller.rb
@@ -97,7 +97,7 @@ class Api::V1::VeriffController < ApplicationController
       status = data.dig('verification', 'status')
       user_id = data.dig('verification', 'vendorData')
 
-      # Actualiza el estado en tu DB
+      # Update the status in your DB
       User.find(user_id).update(verification_status: status)
 
       head :ok
@@ -110,11 +110,11 @@ end
 
 ---
 
-## Parte 2: El Frontend con Next.js
+## Part 2: The Frontend with Next.js
 
-En Next.js, simplemente necesitamos disparar la creación de la sesión y manejar la redirección.
+In Next.js, we simply need to trigger the session creation and handle the redirection.
 
-### Paso 1: Componente de Verificación
+### Step 1: Verification Component
 
 ```jsx
 // components/VeriffButton.js
@@ -136,11 +136,11 @@ export default function VeriffButton() {
       const data = await res.json();
 
       if (data.url) {
-        // Redirige al usuario al flujo de Veriff
+        // Redirect the user to the Veriff flow
         window.location.href = data.url;
       }
     } catch (error) {
-      console.error("Error iniciando Veriff:", error);
+      console.error("Error starting Veriff:", error);
     } finally {
       setLoading(false);
     }
@@ -152,18 +152,18 @@ export default function VeriffButton() {
       disabled={loading}
       className="bg-black text-white px-6 py-3 rounded-lg font-bold"
     >
-      {loading ? 'Preparando...' : 'Verificar mi Identidad'}
+      {loading ? 'Preparing...' : 'Verify My Identity'}
     </button>
   );
 }
 ```
 
-### Paso 2: Pantalla de Retorno
+### Step 2: Return Screen
 
-Veriff te permite configurar una URL de redirección cuando el usuario termina. Puedes crear una página en Next.js (`/verification-status`) que simplemente diga: "Estamos procesando tu verificación, te avisaremos pronto".
+Veriff allows you to configure a redirect URL when the user finishes. You can create a page in Next.js (`/verification-status`) that simply says: "We are processing your verification, we will notify you soon."
 
 ---
 
-### Conclusión
+### Conclusion
 
-La integración de **Veriff** destaca por su seguridad. Al utilizar firmas HMAC para las sesiones y los webhooks, garantizamos que los datos de identidad no puedan ser manipulados. Combinar esto con la robustez de **Rails** y la agilidad de **Next.js** permite crear flujos de onboarding de alta confianza en tiempo récord.
+The **Veriff** integration stands out for its security. By using HMAC signatures for sessions and webhooks, we ensure that identity data cannot be manipulated. Combining this with the robustness of **Rails** and the agility of **Next.js** allows creating high-trust onboarding flows in record time.

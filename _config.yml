@@ -21,8 +21,8 @@
 title: enkilabs
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog de desarrollo de software y tecnología.
-  Compartiendo conocimientos, tutoriales y experiencias en el mundo de la programación.
+  Software development and technology blog.
+  Sharing knowledge, tutorials, and experiences in the programming world.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://enkilabs.site/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Enkilabs1
@@ -31,8 +31,9 @@ google_analytics: G-0Q55DL1GGF
 disqus:
   shortname: enkilabs-site
 header_pages:
+  - blog.markdown
   - about.markdown
-lang: es_ES
+lang: en_US
 
 # Build settings
 theme: minima
