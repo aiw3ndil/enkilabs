@@ -9,21 +9,21 @@ Today marks an exciting milestone: I can finally share one of my favorite projec
 
 ### What is Enkihost?
 
-**Enkihost** is a managed hosting platform designed for the Ruby ecosystem. While our ultimate goal is to provide seamless hosting for **Ruby on Rails, Sinatra, and Jekyll**, we are currently in a **Proof of Concept (PoC)** phase. At this moment, the service is exclusively available for **Jekyll** sites deployed from **public repositories**.
+**Enkihost** is a managed hosting platform designed for the Ruby ecosystem. We provide seamless hosting for **Ruby on Rails, Sinatra, and Jekyll**. At this moment, the service is optimized for **Jekyll** sites and Ruby applications.
 
-While this is just the beginning, I am already planning the next steps, including **automatic deployments from private repositories** and full support for dynamic Ruby applications. 
+We are continuously expanding our capabilities, including **automatic deployments from private repositories** and enhanced support for dynamic Ruby applications. 
 
 ### A Perfect Duo: Enkihost & Enkimail
 
 Enkihost is my favorite project alongside **Enkimail.com**. **Enkimail** is an email platform that provides a specialized gem to manage all user emails once their domains have been validated. Together, these tools aim to simplify infrastructure and communication for Ruby developers.
 
-### Current Status and Road Map
+### Status and Road Map
 
-Since we are in the early stages, please keep a few things in mind:
-- **Broad Vision:** We are starting with Jekyll, but Rails and Sinatra support is coming.
-- **Indicative Pricing:** The current prices are for reference only.
-- **Account Upgrades:** The ability to upgrade to a higher-tier account is not yet functional, but it will be available soon.
-- **Proof of Concept:** The current focus is on stable deployments from public repos.
+Enkihost is now live and ready for use:
+- **Broad Vision:** We offer full support for Jekyll, with expanding capabilities for Rails and Sinatra.
+- **Transparent Pricing:** Our pricing tiers are designed to grow with your projects.
+- **Continuous Improvement:** We are constantly adding new features, such as account upgrades and private repo support.
+- **Stable Deployments:** Our focus remains on providing the most stable and performant hosting for the Ruby community.
 
 ### Join the Journey
 
