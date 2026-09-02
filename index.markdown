@@ -21,7 +21,7 @@ comments: false
         <img src="/assets/images/enkihost-logo.png" alt="Enkihost" style="max-width: 80%; max-height: 80%; object-fit: contain;">
       </div>
       <div class="project-info">
-        <h3 style="margin-top: 0; margin-bottom: 10px; color: #9F2FFF;"><a href="https://www.enkihost.com" target="_blank" style="color: inherit; text-decoration: none;">Enkihost (Under Construction)</a></h3>
+        <h3 style="margin-top: 0; margin-bottom: 10px; color: #9F2FFF;"><a href="https://www.enkihost.com" target="_blank" style="color: inherit; text-decoration: none;">Enkihost</a></h3>
         <p style="margin-bottom: 5px; font-size: 0.95rem; font-weight: bold; color: #ff4d4d;">🚀 Coming Soon - Ruby Hosting for Architects</p>
         <p style="margin-bottom: 15px; font-size: 0.95rem;">Production-ready infrastructure for modern Ruby apps with zero-downtime deployments and isolated environments.</p>
         <ul style="font-size: 0.9rem; padding-left: 20px; color: #d0d0d0;">
