@@ -30,7 +30,15 @@ $grid-color: rgba(11, 177, 211, 0.1);
 }
 
 /* Base sizing & typography */
-html { font-size: 21px; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 21px;
+  overflow-x: hidden;
+}
+
 body {
   background: $bg-primary;
   background-image:
@@ -55,6 +63,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* Wrapper: center content and give breathing room */
@@ -64,6 +76,7 @@ body {
   margin-right: auto;
   padding-left: 28px;
   padding-right: 28px;
+  width: 100%;
 }
 
 /* Header with glassmorphism */
@@ -127,6 +140,8 @@ body {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: $text-primary;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 h1 {
@@ -139,12 +154,15 @@ h1 {
 p, li {
   color: $text-primary;
   line-height: 1.7;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Links with gradient effect */
 a, a:visited {
   color: $accent-cyan;
   transition: all 0.3s ease;
+  overflow-wrap: break-word;
 }
 
 a:hover {
@@ -433,7 +451,7 @@ table th {
   }
 
   .page-content {
-    padding: 20px;
+    padding: 20px 16px;
     margin-top: 0;
     border-radius: 16px;
   }
@@ -466,6 +484,24 @@ table th {
 
   .post-list .post-excerpt {
     font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .page-content {
+    padding: 16px 10px;
+    border-radius: 12px;
+  }
+
+  .cookie-notice {
+    width: calc(100% - 24px) !important;
+    bottom: 12px !important;
+    padding: 14px !important;
   }
 }
 

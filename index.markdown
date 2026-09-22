@@ -4,14 +4,14 @@ comments: false
 ---
 
 <div class="hero-section" style="text-align: center; padding: 40px 0;">
-  <h1 style="font-size: 2.8rem; margin-bottom: 20px;">Enki Labs</h1>
-  <p style="font-size: 1.3rem; line-height: 1.7; max-width: 700px; margin: 0 auto 40px; color: #d0d0d0;">
-    A <strong>non-profit organization</strong> dedicated to experimenting with web technologies and developing digital tools for the community.
+  <h1 style="font-size: 2.8rem; margin-bottom: 20px;">enkilabs</h1>
+  <p class="hero-description" style="font-size: 1.3rem; line-height: 1.7; max-width: 700px; margin: 0 auto 40px; color: #d0d0d0;">
+    enkilabs is not a non-profit, but an independent platform hosting the personal development projects of Albert Oliva.
   </p>
   <a href="/blog/" class="btn">Explore the Blog</a>
 </div>
 
-<h2 style="font-size: 2.2rem; margin-top: 60px; margin-bottom: 30px; text-align: center;">Featured Projects</h2>
+<h2 class="featured-heading" style="font-size: 2.2rem; margin-top: 60px; margin-bottom: 30px; text-align: center;">Featured Projects</h2>
 
 <div class="projects-container" style="display: flex; flex-direction: column; gap: 24px;">
 
@@ -115,13 +115,13 @@ comments: false
 <div class="about-section" style="padding-bottom: 40px;">
   <h2 style="font-size: 2.2rem; margin-bottom: 20px;">About</h2>
   <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
-    <div style="flex: 1; min-width: 300px;">
+    <div style="flex: 1; min-width: 0; width: 100%;">
       <h3 style="font-size: 1.55rem; background: none; -webkit-text-fill-color: initial; color: #fff;">Albert Oliva</h3>
       <p style="color: #d0d0d0; line-height: 1.7; font-size: 1.15rem;">
         Web developer sharing my life in Finland, technology experiences, and reflections on health, language learning, and personal growth.
       </p>
       <div style="margin-top: 20px;">
-        <p style="margin: 5px 0; font-size: 1.15rem;"><strong>Email:</strong> albert.oliva@protonmail.com</p>
+        <p style="margin: 5px 0; font-size: 1.15rem; overflow-wrap: break-word; word-break: break-word;"><strong>Email:</strong> <a href="mailto:albert.oliva@protonmail.com" style="word-break: break-all;">albert.oliva@protonmail.com</a></p>
         <div style="display: flex; gap: 15px; margin-top: 15px; font-size: 1.15rem;">
           <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
           <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a>
@@ -138,23 +138,59 @@ comments: false
     box-shadow: 0 12px 40px rgba(159, 47, 255, 0.15) !important;
     transform: translateY(-4px);
   }
+  .project-info {
+    width: 100%;
+    min-width: 0;
+  }
   @media (max-width: 600px) {
+    .hero-section {
+      padding: 24px 0 !important;
+    }
+    .hero-section h1 {
+      font-size: 2.1rem !important;
+      margin-bottom: 14px !important;
+    }
+    .hero-description {
+      font-size: 1.05rem !important;
+      line-height: 1.6 !important;
+      margin-bottom: 24px !important;
+    }
+    .featured-heading {
+      font-size: 1.65rem !important;
+      margin-top: 36px !important;
+      margin-bottom: 20px !important;
+    }
     .project-item {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      padding: 20px 14px !important;
+      gap: 16px !important;
     }
     .project-item ul {
       text-align: left;
+      padding-left: 18px !important;
+      margin: 0 0 14px 0 !important;
     }
     .project-tags {
       justify-content: center;
     }
     .project-info h3 {
       font-size: 1.35rem !important;
+      margin-bottom: 8px !important;
     }
     .project-info p, .project-info ul {
-      font-size: 1.05rem !important;
+      font-size: 1.02rem !important;
+      line-height: 1.6 !important;
+    }
+    .about-section h2 {
+      font-size: 1.65rem !important;
+    }
+    .about-section h3 {
+      font-size: 1.35rem !important;
+    }
+    .about-section p {
+      font-size: 1.02rem !important;
     }
   }
 </style>
