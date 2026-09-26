@@ -11,7 +11,7 @@ Then comes launch day. You push to production, run your health checks, and... si
 
 The harsh reality of being a solo developer is that **building the product is often the easiest 20% of the journey**. The remaining 80% is distribution. And let’s be honest: marketing web projects is tough, exhausting, and often counter-intuitive for technical minds.
 
-Here are my honest reflections on marketing projects like [Enkihost.com](https://www.enkihost.com), [Enkimail.com](https://www.enkimail.com), [Jombo.fi](https://www.jombo.fi), and [Truek.xyz](https://www.truek.xyz), what channels I currently rely on, and a dilemma I’ve been debating recently.
+Here are my honest reflections on marketing projects like [Enkihost.com](https://www.enkihost.com){:target="_blank"}, [Enkimail.com](https://www.enkimail.com){:target="_blank"}, [Jombo.fi](https://www.jombo.fi){:target="_blank"}, and [Truek.xyz](https://www.truek.xyz){:target="_blank"}, what channels I currently rely on, and a dilemma I’ve been debating recently.
 
 ---
 

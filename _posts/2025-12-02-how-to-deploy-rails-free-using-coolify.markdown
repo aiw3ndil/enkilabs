@@ -209,8 +209,8 @@ With a free server from Oracle Cloud and Coolify, you can have multiple Rails ap
 
 ## 📚 Additional Resources
 
-- [Official Coolify Documentation](https://coolify.io/docs)
-- [Coolify GitHub Repository](https://github.com/coollabsio/coolify)
-- [Coolify Community on Discord](https://coollabs.io/discord)lify.io/docs)
-- [Repositorio GitHub de Coolify](https://github.com/coollabsio/coolify)
-- [Comunidad de Coolify en Discord](https://coollabs.io/discord)
+- [Official Coolify Documentation](https://coolify.io/docs){:target="_blank"}
+- [Coolify GitHub Repository](https://github.com/coollabsio/coolify){:target="_blank"}
+- [Coolify Community on Discord](https://coollabs.io/discord){:target="_blank"}
+- [Repositorio GitHub de Coolify](https://github.com/coollabsio/coolify){:target="_blank"}
+- [Comunidad de Coolify en Discord](https://coollabs.io/discord){:target="_blank"}

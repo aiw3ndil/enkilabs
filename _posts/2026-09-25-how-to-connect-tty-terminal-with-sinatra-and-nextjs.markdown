@@ -7,7 +7,7 @@ categories: ruby sinatra nextjs websockets docker pty fullstack
 
 One of the standout features of modern cloud hosting platforms like Railway, Render, or Fly.io is the **in-browser interactive terminal**. Being able to jump directly into a running production container to inspect logs, troubleshoot an unexpected crash, or run database commands (`rake db:migrate`, `rails c`, or `python manage.py`) without leaving the browser dashboard is an incredible superpower.
 
-When building [Enkihost](https://www.enkihost.com), we wanted this exact experience for our developers. However, because our backend engine is deliberately built on **lightweight Sinatra** rather than full-blown Rails, we did not have Rails ActionCable or heavy server-side streaming engines out of the box.
+When building [Enkihost](https://www.enkihost.com){:target="_blank"}, we wanted this exact experience for our developers. However, because our backend engine is deliberately built on **lightweight Sinatra** rather than full-blown Rails, we did not have Rails ActionCable or heavy server-side streaming engines out of the box.
 
 So how do you bridge an in-browser terminal emulator (**xterm.js**) running in **Next.js** to a real Linux pseudo-terminal (**PTY**) running a containerized shell via **Sinatra** over WebSockets?
 

@@ -7,7 +7,7 @@ categories: ruby sinatra rails backend devops performance
 
 When building web applications in the Ruby world, **Ruby on Rails** is almost universally treated as the default choice. And for good reason: its convention-over-configuration philosophy, battle-tested tooling, and unmatched ecosystem have powered everything from weekend MVPs to multi-billion-dollar tech giants.
 
-However, as [Enkihost](https://www.enkihost.com) and our supporting backend services grew, the overhead of a full Rails stack began to show on smaller cloud virtual machines. Boot times were sluggish, background processes hogged memory, and a significant portion of the framework's built-in baggage sat completely untouched.
+However, as [Enkihost](https://www.enkihost.com){:target="_blank"} and our supporting backend services grew, the overhead of a full Rails stack began to show on smaller cloud virtual machines. Boot times were sluggish, background processes hogged memory, and a significant portion of the framework's built-in baggage sat completely untouched.
 
 That prompted a deliberate architectural decision: **migrating the core API engine to Sinatra**.
 

@@ -27,12 +27,12 @@ The project is divided into two main repositories:
 #### Frontend with Next.js
 The Jombo frontend is developed with **Next.js**, leveraging its server-side rendering capabilities, optimized routes, and exceptional development experience. It offers a smooth, modern, and intuitive user interface.
 
-🔗 **Frontend Repository**: [github.com/aiw3ndil/jombo-frontend](https://github.com/aiw3ndil/jombo-frontend)
+🔗 **Frontend Repository**: [github.com/aiw3ndil/jombo-frontend](https://github.com/aiw3ndil/jombo-frontend){:target="_blank"}
 
 #### API Backend with Ruby on Rails
 The API is built with **Ruby on Rails**, a robust and elegant framework that facilitates rapid development without sacrificing quality. It provides business logic, data management, and is designed to be scalable and efficient.
 
-🔗 **API Repository**: [github.com/aiw3ndil/jombo-api](https://github.com/aiw3ndil/jombo-api)
+🔗 **API Repository**: [github.com/aiw3ndil/jombo-api](https://github.com/aiw3ndil/jombo-api){:target="_blank"}
 
 ## 💡 Applying Vibe Coding in Jombo
 
