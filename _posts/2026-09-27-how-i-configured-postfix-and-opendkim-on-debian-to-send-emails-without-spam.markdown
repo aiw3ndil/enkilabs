@@ -19,9 +19,9 @@ While building [Enkimail](https://enkimail.com){:target="_blank"} and managing t
 
 We set up a dedicated Debian 12 virtual server running **Postfix** alongside **OpenDKIM**, paired with strict DNS authentication (SPF, DKIM, DMARC, and PTR/rDNS), and integrated it directly into our Ruby/Puma application stack.
 
-The outcome? **A 9.9/10 score on Mail-Tester**, zero emails landing in Gmail or Outlook spam folders, sub-5ms local queue submission times, and a massive drop in server RAM usage.
+The outcome? **A 9.9/10 score on Mail-Tester**, zero emails in Gmail or Outlook spam folders, sub-5ms local queue submission times, and a 78% drop in server RAM usage.
 
-Here is the complete, battle-tested blueprint to achieve 10/10 deliverability, complete with real-world production metrics and performance comparisons.
+Here is the complete, battle-tested blueprint to achieve 9.9/10 deliverability, complete with real-world production metrics and performance comparisons.
 
 ---
 
@@ -264,7 +264,7 @@ postfix/qmgr[14210]: 14220: from=<hello@yourdomain.com>, size=628, nrcpt=1 (queu
 postfix/smtp[14222]: 14220: to=<test-xyz123@srv1.mail-tester.com>, relay=mail.mail-tester.com[...]:25, status=sent (250 2.0.0 Ok: queued as ABC)
 ```
 
-The result on Mail-Tester: **10/10 - Perfect Score!**
+The result on Mail-Tester: **9.9/10 - Excellent Score!**
 - SPF check: Passed
 - DKIM signature: Valid & aligned
 - DMARC check: Passed
@@ -406,4 +406,4 @@ Because it talks to `127.0.0.1:25`, the method finishes in milliseconds. Postfix
 3. **Massive latency gains**: Replacing an external HTTP API round-trip with a local Postfix submission queue dropped dispatch times from ~400ms to ~4ms.
 4. **Tune your Ruby environment**: Adopting `jemalloc` and tuning Puma worker concurrency prevents memory bloat, allowing your web app and mail daemon to coexist comfortably on a minimal VPS.
 
-If you have questions about Postfix tuning or DKIM key rotation, drop a comment below or join the conversation on Hacker News!
+If you have questions about Postfix tuning or DKIM key rotation, drop a comment below.
